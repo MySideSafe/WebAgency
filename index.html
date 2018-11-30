@@ -12,31 +12,25 @@
 <body>
     <!--Menu de navigation-->
 
-    <nav id="maNav">
+    <nav class="topnav" id="maNav">
 
         <div class="logo">
             <img src="pictures/logo.png" alt="logo">
         </div>
+        <div class="menu-right">
+            <a href="#slider">Accueil</a>
+            <a href="#nosServices">Services</a>
+            <a href="#nosProjets">Portfolio</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="burger" onclick="myFunction()">
+                <i class="fa fa-bars"></i></a>
+        </div>
 
-
-        <ul>
-            <li><a href="#slider">Accueil</a></li>
-            <li><a href="#nosServices">Services</a></li>
-            <li><a href="#nosProjets">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
-    <div class="burger">
-        <a href="#maNav">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        <img src="pictures/logo.png" alt="logo">
-    </div>
+
     <!--Slider-->
-     <section id="slider">
-       <div class="disclaimer">
+    <section id="slider">
+        <div class="disclaimer">
             <h1>
                 <span class="bleu">WEBAGENCY </span>: L'AGENCE DE TOUS VOS PROJETS !
             </h1>
@@ -44,14 +38,14 @@
                 Vous avez un projet ? La Web Agency vous aide à le réaliser !
             </p>
             <button class="btn1"><a href="#">Plus d'infos</a></button>
-        </div> -->
+        </div> 
         <div class="slide">
 
 
             <img class="mySlides" src="pictures/slider/bg1.jpg" alt="enfant avec les mains pleine de peinture">
             <img class="mySlides" src="pictures/slider/bg2.jpg" alt="enfant avec les mains pleine de peinture">
-           <button class="w3-button w3-display-left" onclick="plusDivs(-1)"><i class="fas fa-angle-left arrow-left"></i></button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)"><i class="fas fa-angle-right arrow-right"></i></button>
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)"><i class="fas fa-angle-left arrow-left"></i></button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)"><i class="fas fa-angle-right arrow-right"></i></button>
         </div>
     </section>
     <!--Nos Services-->
@@ -220,42 +214,57 @@
             </form>
         </div>
     </section>
-    
-    
-    
+
+
+
     <script>
         var slideIndex = 0;
-carousel();
+        carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 5000); // Change image every 2 seconds
-}
-var slideIndex = 1;
-showDivs(slideIndex);
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+                slideIndex = 1
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        function myFunction() {
+            var x = document.getElementById("maNav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 
 </body>
 
