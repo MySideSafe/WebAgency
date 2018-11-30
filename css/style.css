@@ -1,4 +1,7 @@
-
+.tab{border:none;}
+.active{
+    border-top:5px solid #23AFB4;
+}
 .triangle {
     display: inline;
     height: 0;

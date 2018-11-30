@@ -18,10 +18,10 @@
             <img src="pictures/logo.png" alt="logo">
         </div>
         <div class="menu-right">
-            <a href="#slider">Accueil</a>
-            <a href="#nosServices">Services</a>
-            <a href="#nosProjets">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#slider" class="tab active">Accueil</a>
+            <a href="#nosServices" class="tab">Services</a>
+            <a href="#nosProjets" class="tab">Portfolio</a>
+            <a href="#contact" class="tab">Contact</a>
             <a href="javascript:void(0);" class="burger" onclick="myFunction()">
                 <i class="fa fa-bars"></i></a>
         </div>
@@ -264,6 +264,21 @@
                 x.className = "topnav";
             }
         }
+        // Get the container element
+var navContainer = document.getElementById("maNav");
+
+// Get all buttons with class="btn" inside the container
+var tabs = navContainer.getElementsByClassName("tab");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+        
     </script>
 
 </body>
