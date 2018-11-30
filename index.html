@@ -38,7 +38,7 @@
                 Vous avez un projet ? La Web Agency vous aide à le réaliser !
             </p>
             <button class="btn1"><a href="#">Plus d'infos</a></button>
-        </div> 
+        </div>
         <div class="slide">
 
 
@@ -114,12 +114,8 @@
 
             </p>
             <div class="nav2">
-                <ul>
-                    <li><span class="triangle"></span><a href="#">All Works</a></li>
-                    <li><span class="triangle"></span><a href="#">Creative</a></li>
-                    <li><span class="triangle"></span><a href="#">Corporate</a></li>
-                    <li><span class="triangle"></span><a href="#">Portfolio</a></li>
-                </ul>
+                <a href="#">All Works</a><a href="#">Creative</a><a href="#">Corporate</a><a href="#">Portfolio</a>
+
             </div>
 
         </div>
@@ -209,7 +205,7 @@
                 <input type="text" name="name" placeholder="Name">
                 <input type="text" name="email" placeholder="Email">
                 <input type="text" name="subject" placeholder="Subject">
-                <textarea name="message" id="" cols="15" rows="10">Message</textarea>
+                <textarea name="message" id="" cols="15" rows="10" placeholder="Message"></textarea>
                 <input type="submit" class="btn1 btn2" value="Send Message">
             </form>
         </div>
@@ -265,20 +261,19 @@
             }
         }
         // Get the container element
-var navContainer = document.getElementById("maNav");
+        var navContainer = document.getElementById("maNav");
 
-// Get all buttons with class="btn" inside the container
-var tabs = navContainer.getElementsByClassName("tab");
+        // Get all buttons with class="btn" inside the container
+        var tabs = navContainer.getElementsByClassName("tab");
 
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-        
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
     </script>
 
 </body>
