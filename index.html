@@ -116,7 +116,7 @@
 
             </p>
             <div class="nav2" id="navProject">
-                <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')"><span class="triangle show"></span>All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')"><span class="triangle"></span>Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')"><span class="triangle"></span>Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')"><span class="triangle"></span>Portfolio</a>
+                <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')"></span>All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')"><span class="triangle"></span>Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')"><span class="triangle"></span>Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')"><span class="triangle"></span>Portfolio</a>
 
             </div>
 
@@ -277,7 +277,7 @@
         var tabContainer = document.getElementById("navProject");
         var tabs2 = tabContainer.getElementsByClassName("tab2");
 
-        for (var j = 0; j < triangles.length; j++) {
+        for (var j = 0; j < tabs2.length; j++) {
             for (var j = 0; j < tabs2.length; j++) {
                 tabs2[j].addEventListener("click", function () {
                     var current = document.getElementsByClassName("selected");
