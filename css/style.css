@@ -7,8 +7,10 @@
     border-left: 7px solid transparent;
     position: relative;
     top: 48px;
-    left: 50px;
+    left: 45%;
 }
+
+
 
 .flex {
     display: flex;
@@ -297,7 +299,10 @@ nav {
 }
 
 
-
+.selected{
+    background-color: #23AFB4 !important;
+    color:white !important;
+}
 
 
 
@@ -363,6 +368,10 @@ figure:hover figcaption {
 
 .cap-bot:hover figcaption {
     bottom: 0;
+}
+
+.unselected{
+    display:none;
 }
 
 
