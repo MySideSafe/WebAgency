@@ -279,7 +279,7 @@ nav {
 #service {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
     margin-left: 15%;
     margin-right: 15%;
 }
