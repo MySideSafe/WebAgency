@@ -1,5 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .triangle {
-    display: inline;
+    display: none;
     height: 0;
     width: 0;
     border-top: 14px solid #23AFB4;
@@ -10,7 +14,9 @@
     left: 45%;
 }
 
-
+.show {
+    display: inline !important;
+}
 
 .flex {
     display: flex;
@@ -122,6 +128,7 @@ h3 {
 .separation {
     width: 80px;
     margin: auto;
+    padding-bottom: 30px;
 }
 
 hr {
@@ -201,6 +208,7 @@ nav {
 
 #slider {
     position: relative;
+    top: 65px;
 }
 
 .slide {
@@ -271,8 +279,18 @@ nav {
 #service {
     display: flex;
     justify-content: space-between;
-    margin-left: 20%;
-    margin-right: 20%;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.picService {
+    padding-right: 150px;
+}
+
+#nosServices {
+    padding-top: 140px;
+    padding-bottom: 100px;
 }
 
 .iconService {
@@ -287,7 +305,6 @@ nav {
     padding: 50px;
 }
 
-
 .nav2 a {
     display: inline-block;
     text-align: center;
@@ -298,19 +315,23 @@ nav {
     background-color: gainsboro;
 }
 
-
-.selected{
-    background-color: #23AFB4 !important;
-    color:white !important;
+.nav2 a:first-child {
+    border-radius: 5px 0 0 5px;
 }
 
+.nav2 a:last-child {
+    border-radius: 0 5px 5px 0;
+}
 
-
-
+.selected {
+    background-color: #23AFB4 !important;
+    color: white !important;
+}
 
 #nosProjets {
     background-color: #f5f5f5;
-    padding-top: 20px;
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
 
 #projets {
@@ -322,7 +343,7 @@ nav {
 }
 
 #projets img {
-    width: 400px;
+    width: 100%;
     display: block;
 }
 
@@ -370,8 +391,8 @@ figure:hover figcaption {
     bottom: 0;
 }
 
-.unselected{
-    display:none;
+.unselected {
+    display: none;
 }
 
 
@@ -383,6 +404,7 @@ figure:hover figcaption {
     position: absolute;
     filter: brightness(65%);
     -webkit-filter: brightness(65%);
+    border: 0px;
 }
 
 .btn2 {
@@ -425,7 +447,10 @@ figure:hover figcaption {
     margin: 10px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 640px) {
+    body {
+        max-width: 640px;
+    }
     nav {
         position: fixed;
         width: 100%;

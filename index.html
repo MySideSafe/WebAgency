@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="pictures/logo-fav.png" />
+    <meta name="description" content="Web agency spécialisée dans le responsive webdesign, référencement naturel de site Internet, l'audit de performance & le marketing digital.">
     <meta name="viewport" content="width=device-width" />
     <title>WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS !</title>
 </head>
@@ -37,7 +39,7 @@
             <p>
                 Vous avez un projet ? La Web Agency vous aide à le réaliser !
             </p>
-            <button class="btn1"><a href="#">Plus d'infos</a></button>
+            <button class="btn1">Plus d'infos</button>
         </div>
         <div class="slide">
 
@@ -62,7 +64,7 @@
             </p>
         </div>
         <div id="service">
-            <div>
+            <div class="picService">
                 <img src="pictures/main-feature.png" alt="ecran d'ordinateur">
             </div>
             <div>
@@ -114,7 +116,7 @@
 
             </p>
             <div class="nav2" id="navProject">
-                <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')"><span class="triangle"></span>All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')"><span class="triangle"></span>Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')"><span class="triangle"></span>Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')"><span class="triangle"></span>Portfolio</a>
+                <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')"><span class="triangle show"></span>All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')"><span class="triangle"></span>Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')"><span class="triangle"></span>Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')"><span class="triangle"></span>Portfolio</a>
 
             </div>
 
@@ -191,7 +193,7 @@
     <!--Map et formulaire de contact-->
     <section id="contact">
         <div style="width: 100%">
-            <iframe class="map" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=25%20rue%20d'hauteville+(25%20rue%20d'hauteville)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Embed Google Map</a></iframe>
+            <iframe class="map" src="https://maps.google.com/maps?height=600&amp;hl=en&amp;q=20rued'hauteville+(20rued'hauteville)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
         <br />
         <div class="formulaire">
@@ -228,7 +230,7 @@
                 slideIndex = 1
             }
             x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 5000); // Change image every 2 seconds
+            setTimeout(carousel, 5000);
         }
         var slideIndex = 1;
         showDivs(slideIndex);
@@ -260,13 +262,9 @@
                 x.className = "topnav";
             }
         }
-        // Get the container element
+
         var navContainer = document.getElementById("maNav");
-
-        // Get all buttons with class="btn" inside the container
         var tabs = navContainer.getElementsByClassName("tab");
-
-        // Loop through the buttons and add the active class to the current/clicked button
         for (var i = 0; i < tabs.length; i++) {
             tabs[i].addEventListener("click", function () {
                 var current = document.getElementsByClassName("active");
@@ -275,20 +273,20 @@
             });
         }
 
-        // Get the container element
-        var tabContainer = document.getElementById("navProject");
 
-        // Get all buttons with class="btn" inside the container
+        var tabContainer = document.getElementById("navProject");
         var tabs2 = tabContainer.getElementsByClassName("tab2");
 
-        // Loop through the buttons and add the active class to the current/clicked button
-        for (var j = 0; j < tabs2.length; j++) {
-            tabs2[j].addEventListener("click", function () {
-                var current = document.getElementsByClassName("selected");
-                current[0].className = current[0].className.replace(" selected", "");
+        for (var j = 0; j < triangles.length; j++) {
+            for (var j = 0; j < tabs2.length; j++) {
+                tabs2[j].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("selected");
+                    current[0].className = current[0].className.replace(" selected", "");
+                    this.className += " selected";
+                });
+            }
 
-                this.className += " selected";
-            });
+
         }
 
         function select(wanted) {
@@ -348,19 +346,7 @@
                 break;
             }
 
-            /*
-            var projects= projectContainer.getElementsByClassName("cap-bot");
-            
-            for (var i = 0; i < projects.length; i++) {
-            
-                 if(projects[i].className != "cap-bot "+wanted)
-                     {
-                         projects[i].className +=" unselected";
-                     }
-                
-            
-            
-        }*/
+
         }
     </script>
 
