@@ -36,18 +36,26 @@
             <h1>
                 <span class="bleu">WEBAGENCY </span>: L'AGENCE DE TOUS VOS PROJETS !
             </h1>
-            <p>
+            <p class="offMobile">
                 Vous avez un projet ? La Web Agency vous aide à le réaliser !
             </p>
             <button class="btn1">Plus d'infos</button>
         </div>
         <div class="slide">
+<picture>
+  <source media="(max-width: 769px)" srcset="pictures/slider/bg3.jpg">
+  <source media="(min-width: 768px)" srcset="pictures/slider/bg1.jpg">
+   <img class="mySlides" src="pictures/slider/bg1.jpg" alt="enfant avec les mains pleine de peinture">
+</picture>
+            <picture>
+  <source media="(max-width: 769px)" srcset="pictures/slider/bg4.jpg">
+  <source media="(min-width: 768px)" srcset="pictures/slider/bg2.jpg">
+   <img class="mySlides" src="pictures/slider/bg2.jpg" alt="enfant">
+</picture>
 
-
-            <img class="mySlides" src="pictures/slider/bg1.jpg" alt="enfant avec les mains pleine de peinture">
-            <img class="mySlides" src="pictures/slider/bg2.jpg" alt="enfant avec les mains pleine de peinture">
-            <button class="w3-button w3-display-left" onclick="plusDivs(-1)"><i class="fas fa-angle-left arrow-left"></i></button>
-            <button class="w3-button w3-display-right" onclick="plusDivs(+1)"><i class="fas fa-angle-right arrow-right"></i></button>
+           
+            <button class="w3-button w3-display-left offMobile" onclick="plusDivs(-1)"><i class="fas fa-angle-left arrow-left"></i></button>
+            <button class="w3-button w3-display-right offMobile" onclick="plusDivs(+1)"><i class="fas fa-angle-right arrow-right"></i></button>
         </div>
     </section>
     <!--Nos Services-->
@@ -67,13 +75,13 @@
             <div class="picService">
                 <img src="pictures/main-feature.png" alt="ecran d'ordinateur">
             </div>
-            <div>
+            <div id="serviceLeft">
                 <div class="flex">
                     <div class="iconService">
                         <i class="fas fa-chart-line circle3 fontService"></i>
                         <div class="smallCircle"></div>
                     </div>
-                    <div>
+                    <div class="iconText">
                         <h3>UX design</h3>
                         <p>En s'appuyant sur une ergonomie innovante et cohérente, nous imaginons les solutions les plus adaptées aux exigences de votre projet, en respectant vos contraintes et en tenant compte des attentes et besoins de votre cible.</p>
                     </div>
@@ -83,7 +91,7 @@
                         <i class="fas fa-cubes circle3 fontService"></i>
                         <div class="smallCircle"></div>
                     </div>
-                    <div>
+                    <div  class="iconText">
                         <h3>UI design</h3>
                         <p>Nous traduisons visuellement vos idées en formes et couleurs afin de séduire votre cible sur votre site internet, votre charte graphique, votre application mobile et même vos campagnes publicitaires.</p>
 
@@ -94,7 +102,7 @@
                         <i class="fas fa-chart-pie circle3 fontService"></i>
                         <div class="smallCircle"></div>
                     </div>
-                    <div>
+                    <div  class="iconText">
                         <h3>SEO</h3>
                         <p>Notre Agence est spécialisée en référencement de site internet ecommerce, alors n’hésitez pas, soumettez-nous votre site pour un audit SEO. A la pointe de la R&D, notre agence SEO dispose d’outils référencement naturel uniques sur le marché.</p>
                     </div>
@@ -115,13 +123,13 @@
                 Web Agency est une agence web spécialisée dans la création web et mobile. Nous mettons à disposition de nos client notre savoir faire dans l’élaboration de stratégie digitale. Vous trouverez ici différents exemples des projets que nous avons déjà réalisés.
 
             </p>
-            <div class="nav2" id="navProject">
-                <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')"></span>All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')"><span class="triangle"></span>Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')"><span class="triangle"></span>Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')"><span class="triangle"></span>Portfolio</a>
-
-            </div>
+            
 
         </div>
+<div class="nav2" id="navProject">
+                <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')"><i class="triangle show"></i>All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')"><i class="triangle"></i>Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')"><i class="triangle"></i>Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')"><i class="triangle"></i>Portfolio</a>
 
+            </div>
         <div id="projets">
             <figure tabindex="0" class="cap-bot creative"><img src="pictures/portfolio/01.jpg" alt="projet1">
                 <figcaption>
@@ -192,10 +200,10 @@
     </section>
     <!--Map et formulaire de contact-->
     <section id="contact">
-        <div style="width: 100%">
-            <iframe class="map" src="https://maps.google.com/maps?height=600&amp;hl=en&amp;q=20rued'hauteville+(20rued'hauteville)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
-        </div>
-        <br />
+        
+            <iframe class="map offMobile" src="https://maps.google.com/maps?height=600&amp;hl=en&amp;q=20rued'hauteville+(20rued'hauteville)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
+        
+        
         <div class="formulaire">
             <form action="">
                 <h3>Contact Info</h3>
@@ -213,142 +221,7 @@
         </div>
     </section>
 
-
-
-    <script>
-        var slideIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1
-            }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 5000);
-        }
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-
-        function myFunction() {
-            var x = document.getElementById("maNav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-
-        var navContainer = document.getElementById("maNav");
-        var tabs = navContainer.getElementsByClassName("tab");
-        for (var i = 0; i < tabs.length; i++) {
-            tabs[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-
-
-        var tabContainer = document.getElementById("navProject");
-        var tabs2 = tabContainer.getElementsByClassName("tab2");
-
-        for (var j = 0; j < tabs2.length; j++) {
-            for (var j = 0; j < tabs2.length; j++) {
-                tabs2[j].addEventListener("click", function () {
-                    var current = document.getElementsByClassName("selected");
-                    current[0].className = current[0].className.replace(" selected", "");
-                    this.className += " selected";
-                });
-            }
-
-
-        }
-
-        function select(wanted) {
-            var a = new RegExp("unselected");
-            var b = new RegExp("cap-bot " + wanted);
-            var projectContainer = document.getElementById("projets");
-            switch (wanted) {
-            case 'all':
-                var projects = projectContainer.getElementsByClassName("cap-bot");
-                for (var i = 0; i < projects.length; i++) {
-
-                    projects[i].className = projects[i].className.replace(" unselected", "");
-
-                }
-                break;
-            case 'creative':
-                var projects = projectContainer.getElementsByClassName("cap-bot");
-                var test = new RegExp("cap-bot " + wanted);
-                for (var i = 0; i < projects.length; i++) {
-                    if (a.test(projects[i].className)) {
-
-                        projects[i].className = projects[i].className.replace(" unselected", "");
-
-                    }
-                }
-                for (var i = 0; i < projects.length; i++) {
-                    if (!(b.test(projects[i].className))) {
-                        projects[i].className += " unselected";
-                    }
-                }
-                break;
-            case 'corporate':
-                var projects = projectContainer.getElementsByClassName("cap-bot");
-                for (var i = 0; i < projects.length; i++) {
-                    if (a.test(projects[i].className)) {
-                        projects[i].className = projects[i].className.replace(" unselected", "");
-                    }
-                }
-                for (var i = 0; i < projects.length; i++) {
-                    if (!(b.test(projects[i].className))) {
-                        projects[i].className += " unselected";
-                    }
-                }
-                break;
-            case 'portfolio':
-                var projects = projectContainer.getElementsByClassName("cap-bot");
-                for (var i = 0; i < projects.length; i++) {
-                    if (a.test(projects[i].className)) {
-                        projects[i].className = projects[i].className.replace(" unselected", "");
-                    }
-                }
-                for (var i = 0; i < projects.length; i++) {
-                    if (!(b.test(projects[i].className))) {
-                        projects[i].className += " unselected";
-                    }
-                }
-                break;
-            }
-
-
-        }
-    </script>
+<script type="text/javascript" src="function.js"></script>
 
 </body>
 
