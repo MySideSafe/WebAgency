@@ -45,6 +45,11 @@ var slideIndex = 0;
             }
         }
 
+        function myFunction2(){
+            var x =document.getElementById("maNav");
+                x.className=x.className.replace(" responsive","") ;
+        }
+
         var navContainer = document.getElementById("maNav");
         var tabs = navContainer.getElementsByClassName("tab");
         for (var i = 0; i < tabs.length; i++) {
