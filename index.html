@@ -20,12 +20,11 @@
             <img src="pictures/logo.png" alt="logo">
         </div>
         <div class="menu-right">
-            <a href="#" class="tab active" onclick="myFunction2()">Accueil</a>
-            <a href="#nosServices" class="tab" onclick="myFunction2()">Services</a>
-            <a href="#nosProjets" class="tab" onclick="myFunction2()">Portfolio</a>
-            <a href="#contact" class="tab" onclick="myFunction2()">Contact</a>
-            <a href="#" class="burger" onclick="myFunction()">
-                <i class="fa fa-bars"></i></a>
+            <a href="#" class="tab active" onclick="menuFunction()">Accueil</a>
+            <a href="#nosServices" class="tab" onclick="menuFunction()">Services</a>
+            <a href="#nosProjets" class="tab" onclick="menuFunction()">Portfolio</a>
+            <a href="#contact" class="tab" onclick="menuFunction()">Contact</a>
+            <a href="#" class="burger" onclick="burgerFunction()"><i class="fa fa-bars"></i></a>
         </div>
 
     </nav>
@@ -42,18 +41,18 @@
             <button class="btn1">Plus d'infos</button>
         </div>
         <div class="slide">
-<picture>
-  <source media="(max-width: 769px)" srcset="pictures/slider/bg3.jpg">
-  <source media="(min-width: 768px)" srcset="pictures/slider/bg1.jpg">
-   <img class="mySlides" src="pictures/slider/bg1.jpg" alt="enfant avec les mains pleine de peinture">
-</picture>
             <picture>
-  <source media="(max-width: 769px)" srcset="pictures/slider/bg4.jpg">
-  <source media="(min-width: 768px)" srcset="pictures/slider/bg2.jpg">
-   <img class="mySlides" src="pictures/slider/bg2.jpg" alt="enfant">
-</picture>
+                <source media="(max-width: 769px)" srcset="pictures/slider/bg3.jpg">
+                <source media="(min-width: 768px)" srcset="pictures/slider/bg1.jpg">
+                <img class="mySlides" src="pictures/slider/bg1.jpg" alt="enfant avec les mains pleine de peinture">
+            </picture>
+            <picture>
+                <source media="(max-width: 769px)" srcset="pictures/slider/bg4.jpg">
+                <source media="(min-width: 768px)" srcset="pictures/slider/bg2.jpg">
+                <img class="mySlides" src="pictures/slider/bg2.jpg" alt="enfant">
+            </picture>
 
-           
+
             <button class="w3-button w3-display-left offMobile" onclick="plusDivs(-1)"><i class="fas fa-angle-left arrow-left"></i></button>
             <button class="w3-button w3-display-right offMobile" onclick="plusDivs(+1)"><i class="fas fa-angle-right arrow-right"></i></button>
         </div>
@@ -91,7 +90,7 @@
                         <i class="fas fa-cubes circle3 fontService"></i>
                         <div class="smallCircle"></div>
                     </div>
-                    <div  class="iconText">
+                    <div class="iconText">
                         <h3>UI design</h3>
                         <p>Nous traduisons visuellement vos idées en formes et couleurs afin de séduire votre cible sur votre site internet, votre charte graphique, votre application mobile et même vos campagnes publicitaires.</p>
 
@@ -102,7 +101,7 @@
                         <i class="fas fa-chart-pie circle3 fontService"></i>
                         <div class="smallCircle"></div>
                     </div>
-                    <div  class="iconText">
+                    <div class="iconText">
                         <h3>SEO</h3>
                         <p>Notre Agence est spécialisée en référencement de site internet ecommerce, alors n’hésitez pas, soumettez-nous votre site pour un audit SEO. A la pointe de la R&D, notre agence SEO dispose d’outils référencement naturel uniques sur le marché.</p>
                     </div>
@@ -123,13 +122,13 @@
                 Web Agency est une agence web spécialisée dans la création web et mobile. Nous mettons à disposition de nos client notre savoir faire dans l’élaboration de stratégie digitale. Vous trouverez ici différents exemples des projets que nous avons déjà réalisés.
 
             </p>
-            
+
 
         </div>
-<div class="nav2" id="navProject">
-                <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')">All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')">Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')">Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')">Portfolio</a>
+        <div class="nav2" id="navProject">
+            <a href="javascript:void(0);" class="tab2 selected" onclick="select('all')">All Works</a><a href="javascript:void(0);" class="tab2" onclick="select('creative')">Creative</a><a href="javascript:void(0);" class="tab2" onclick="select('corporate')">Corporate</a><a href="javascript:void(0);" class="tab2" onclick="select('portfolio')">Portfolio</a>
 
-            </div>
+        </div>
         <div id="projets">
             <figure tabindex="0" class="cap-bot creative"><img src="pictures/portfolio/01.jpg" alt="projet1">
                 <figcaption>
@@ -200,7 +199,7 @@
     </section>
     <!--Map et formulaire de contact-->
     <section id="contact">
-            <iframe class="map offMobile" src="https://maps.google.com/maps?height=600&amp;hl=en&amp;q=20rued'hauteville+(20rued'hauteville)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
+        <iframe class="map offMobile" src="https://maps.google.com/maps?height=600&amp;hl=en&amp;q=20rued'hauteville+(20rued'hauteville)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
         <div class="formulaire">
             <form action="">
                 <h3>Contact Info</h3>
@@ -218,7 +217,7 @@
         </div>
     </section>
 
-<script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript" src="js/function.js"></script>
 
 </body>
 
