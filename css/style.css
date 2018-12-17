@@ -1,12 +1,15 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     font-family: Roboto-Regular;
     color: gray;
     line-height: 1.5em;
 }
+
+
 /*Police*/
 
 @font-face {
@@ -23,7 +26,10 @@ body {
     font-family: 'Font Awesome 5 Free';
     src: url(../fonts/fontawesome-webfont.ttf);
 }
+
+
 /*Général*/
+
 h1 {
     font-size: 1.9em;
     margin: 0;
@@ -39,9 +45,11 @@ h3 {
     font-family: Roboto-Bold;
     color: black;
 }
+
 .bleu {
     color: #23AFB4;
 }
+
 .separation {
     width: 80px;
     margin: auto;
@@ -58,6 +66,7 @@ hr {
     border-top-width: 0px;
     border-top-style: solid;
 }
+
 .circle {
     background-color: #23AFB4;
     width: 15px;
@@ -67,34 +76,6 @@ hr {
     position: relative;
     top: 16px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Menu de navigation */
@@ -168,6 +149,7 @@ nav {
     left: 20%;
     width: 28%;
 }
+
 .btn1 {
     background-color: #23AFB4;
     height: 30px;
@@ -180,6 +162,7 @@ nav {
     color: white;
     text-decoration: none;
 }
+
 .mySlides {
     display: none;
 }
@@ -235,9 +218,11 @@ nav {
     margin-left: 15%;
     margin-right: 15%;
 }
+
 .flex {
     display: flex;
 }
+
 .picService {
     flex: 1;
 }
@@ -250,6 +235,7 @@ nav {
     padding-top: 140px;
     padding-bottom: 100px;
 }
+
 .smallCircle {
     background-color: #23AFB4;
     width: 15px;
@@ -259,17 +245,20 @@ nav {
     top: 30px;
     left: 67px;
 }
+
 .fontService {
     margin: 2px;
     font-size: 2em;
     position: absolute;
     color: #23AFB4;
 }
+
 .iconService {
     font-family: 'Font Awesome 5 Free';
     min-width: 130px;
     margin-top: 20px;
 }
+
 .circle3 {
     border: 2px solid gray;
     width: 30px;
@@ -334,6 +323,7 @@ nav {
     width: 100%;
     display: block;
 }
+
 .circleProjet {
     border: 2px solid white;
     width: 36px;
