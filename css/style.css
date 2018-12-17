@@ -339,7 +339,7 @@ nav {
     color: white;
     background-color: #23AFB4;
     bottom: 58px;
-    left: 73%;
+    right:5px;
 }
 
 figure {
@@ -503,7 +503,7 @@ figure:hover figcaption {
     .fontProjet {
         top: -26px;
         font-size: 1em;
-        left: 65%
+        
     }
     .circleProjet {
         width: 15px;
@@ -599,7 +599,7 @@ figure:hover figcaption {
     .fontProjet {
         top: -26px;
         font-size: 1em;
-        left: 73%
+        
     }
     .circleProjet {
         width: 15px;
@@ -622,6 +622,7 @@ figure:hover figcaption {
     }
     .formulaire h3 {
         margin: 0 10px 10px 10px;
+        text-align: center;
     }
     .offMobile {
         display: none;
