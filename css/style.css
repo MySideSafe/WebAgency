@@ -1,68 +1,29 @@
 html {
     scroll-behavior: smooth;
 }
-
-.flex {
-    display: flex;
-}
-
-.fontService {
-    margin: 2px;
-    font-size: 2em;
-    position: absolute;
-    color: #23AFB4;
-}
-
-.fontProjet {
-    margin: 2px;
-    font-size: 2em;
-    position: absolute;
-    color: white;
-    background-color: #23AFB4;
-    bottom: 58px;
-    left: 73%;
-}
-
-.circle3 {
-    border: 2px solid gray;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding: 20px;
-}
-
-.circleProjet {
-    border: 2px solid white;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    padding: 20px;
-}
-
 body {
     margin: 0;
     font-family: Roboto-Regular;
     color: gray;
     line-height: 1.5em;
 }
+/*Police*/
 
-.bleu {
-    color: #23AFB4;
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf');
 }
 
-.btn1 {
-    background-color: #23AFB4;
-    height: 30px;
-    border-radius: 3px;
-    border: 0px;
-    color: white;
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf');
 }
 
-.btn1 a {
-    color: white;
-    text-decoration: none;
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    src: url(../fonts/fontawesome-webfont.ttf);
 }
-
+/*Général*/
 h1 {
     font-size: 1.9em;
     margin: 0;
@@ -78,38 +39,9 @@ h3 {
     font-family: Roboto-Bold;
     color: black;
 }
-
-.circle {
-    background-color: #23AFB4;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin: auto;
-    position: relative;
-    top: 16px;
+.bleu {
+    color: #23AFB4;
 }
-
-.smallCircle {
-    background-color: #23AFB4;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    position: relative;
-    top: 30px;
-    left: 67px;
-}
-
-.bigCircle {
-    background-color: #23AFB4;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin: auto;
-    position: relative;
-    top: 35px;
-}
-
 .separation {
     width: 80px;
     margin: auto;
@@ -126,23 +58,43 @@ hr {
     border-top-width: 0px;
     border-top-style: solid;
 }
-
-
-/*Police*/
-
-@font-face {
-    font-family: 'Roboto-Regular';
-    src: url('../fonts/Roboto-Regular.ttf');
+.circle {
+    background-color: #23AFB4;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 16px;
 }
 
-@font-face {
-    font-family: 'Roboto-Bold';
-    src: url('../fonts/Roboto-Bold.ttf');
-}
-@font-face{
-    font-family:'Font Awesome 5 Free';
-        src:url(../fonts/fontawesome-webfont.ttf);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Menu de navigation */
@@ -216,7 +168,18 @@ nav {
     left: 20%;
     width: 28%;
 }
+.btn1 {
+    background-color: #23AFB4;
+    height: 30px;
+    border-radius: 3px;
+    border: 0px;
+    color: white;
+}
 
+.btn1 a {
+    color: white;
+    text-decoration: none;
+}
 .mySlides {
     display: none;
 }
@@ -269,27 +232,50 @@ nav {
 #service {
     display: flex;
     justify-content: space-between;
-    
     margin-left: 15%;
     margin-right: 15%;
 }
-
-.picService {
-    flex : 1;
+.flex {
+    display: flex;
 }
-#serviceLeft{
-    flex:1;
+.picService {
+    flex: 1;
+}
+
+#serviceLeft {
+    flex: 1;
 }
 
 #nosServices {
     padding-top: 140px;
     padding-bottom: 100px;
 }
-
+.smallCircle {
+    background-color: #23AFB4;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    left: 67px;
+}
+.fontService {
+    margin: 2px;
+    font-size: 2em;
+    position: absolute;
+    color: #23AFB4;
+}
 .iconService {
     font-family: 'Font Awesome 5 Free';
-    min-width:130px;
+    min-width: 130px;
     margin-top: 20px;
+}
+.circle3 {
+    border: 2px solid gray;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 20px;
 }
 
 
@@ -322,13 +308,14 @@ nav {
     background-color: #23AFB4 !important;
     color: white !important;
 }
-.selected::after{
+
+.selected::after {
     font-family: 'Font Awesome 5 Free';
-	content: '\f0d7';
+    content: '\f0d7';
     color: #23AFB4;
-	position: relative;
-	bottom: -27px;
-	right: 45%;
+    position: relative;
+    bottom: -27px;
+    right: 45%;
 }
 
 #nosProjets {
@@ -341,17 +328,28 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-   
 }
 
 #projets img {
     width: 100%;
     display: block;
 }
+.circleProjet {
+    border: 2px solid white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 20px;
+}
 
-.containerPicture {
-    margin-bottom: 40px;
-    display: block;
+.fontProjet {
+    margin: 2px;
+    font-size: 2em;
+    position: absolute;
+    color: white;
+    background-color: #23AFB4;
+    bottom: 58px;
+    left: 73%;
 }
 
 figure {
@@ -359,8 +357,7 @@ figure {
     position: relative;
     float: left;
     overflow: hidden;
-    width:20%;
-  /* margin: 0 50px 50px 0;*/
+    width: 20%;
 }
 
 figcaption {
@@ -370,14 +367,14 @@ figcaption {
     width: 100%;
     height: 100px;
     opacity: 0;
-    /*padding-left: 20px;*/
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
 }
-figcaption h3,p
-{
-  padding-left: 10px;  
+
+figcaption h3,
+p {
+    padding-left: 10px;
 }
 
 figcaption a {
@@ -455,86 +452,6 @@ figure:hover figcaption {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
-    nav {
-        position:fixed;
-        width: 100%;
-        background-color: white;
-        top: 0;
-        z-index: 1;
-        padding: 10px 0 10px 0;
-    }
-    .logo {
-        display: inline-block;
-        margin: 0;
-    }
-    .topnav a {
-        display: none;
-    }
-    .topnav a.burger {
-        float: right;
-        display: block;
-    }
-    .menu-right {
-        margin: 0%;
-        float: none;
-    }
-    .topnav.responsive {
-        position: relative;
-    }
-    .topnav.responsive a.burger {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-    }
-
-    .disclaimer{
-        top:20%;
-        line-height: 1.7em;
-    }
-    .disclaimer h1{
-        font-size: 1.4em;
-    }
-    #service {
-        display: flex;
-        flex-wrap:wrap;
-    }
-    .picService{
-        text-align: center;
-    }
-    figure{
-        width:25%;
-    }
-    figcaption{
-        height:75px;
-    }
-    figcaption h3{
-        font-size:0.9em;
-    }
-    .fontProjet{
-        top:-26px;
-        font-size:1em;
-        left:65%
-    }
-    .circleProjet{
-        width:15px;
-        height:15px;
-    }
-    .formulaire{
-        left:55%;
-        padding: 0;
-    }
-    .formulaire h3 {
-    
-    margin: 0 10px 10px 10px;
-}
-}
-
-@media (max-width: 768px){
     nav {
         position: fixed;
         width: 100%;
@@ -570,88 +487,153 @@ figure:hover figcaption {
         float: none;
         display: block;
     }
-
-    .disclaimer{
-        top:20%;
-        width:60%;
+    .disclaimer {
+        top: 20%;
+        line-height: 1.7em;
+    }
+    .disclaimer h1 {
+        font-size: 1.4em;
+    }
+    #service {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .picService {
         text-align: center;
-        background-color: rgba(0,0,0,0.6);
-        padding:8px;
+    }
+    figure {
+        width: 25%;
+    }
+    figcaption {
+        height: 75px;
+    }
+    figcaption h3 {
+        font-size: 0.9em;
+    }
+    .fontProjet {
+        top: -26px;
+        font-size: 1em;
+        left: 65%
+    }
+    .circleProjet {
+        width: 15px;
+        height: 15px;
+    }
+    .formulaire {
+        left: 55%;
+        padding: 0;
+    }
+    .formulaire h3 {
+        margin: 0 10px 10px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        top: 0;
+        z-index: 1;
+        padding: 10px 0 10px 0;
+    }
+    .logo {
+        display: inline-block;
+        margin: 0;
+    }
+    .topnav a {
+        display: none;
+    }
+    .topnav a.burger {
+        float: right;
+        display: block;
+    }
+    .menu-right {
+        margin: 0%;
+        float: none;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.burger {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+    }
+    .disclaimer {
+        top: 20%;
+        width: 60%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 8px;
         border-radius: 5px;
         line-height: 1.7em;
     }
-    .disclaimer h1{
+    .disclaimer h1 {
         font-size: 1em;
     }
-    
     #service {
         display: flex;
-        flex-wrap:wrap;
-        margin:0;
+        flex-wrap: wrap;
+        margin: 0;
     }
-    #nosServices{
-        padding-top:110px; 
+    #nosServices {
+        padding-top: 110px;
     }
-    .picService{
+    .picService {
         text-align: center;
-        flex:auto;
+        flex: auto;
     }
-    .picService img{
-        width:100%;
-        
+    .picService img {
+        width: 100%;
     }
-    #serviceLeft{
-        flex:1;
+    #serviceLeft {
+        flex: 1;
     }
-    .selected::after{
-    
-	bottom: -23px;
-	
-}
-    figure{
-        width:100%;
+    .selected::after {
+        bottom: -23px;
     }
-    figcaption{
-        height:75px;
+    figure {
+        width: 100%;
     }
-    figcaption h3{
-        font-size:0.9em;
+    figcaption {
+        height: 75px;
     }
-    .fontProjet{
-        top:-26px;
-        font-size:1em;
-        left:73%
+    figcaption h3 {
+        font-size: 0.9em;
     }
-    .circleProjet{
-        width:15px;
-        height:15px;
+    .fontProjet {
+        top: -26px;
+        font-size: 1em;
+        left: 73%
     }
-    .nav2{
+    .circleProjet {
+        width: 15px;
+        height: 15px;
+    }
+    .nav2 {
         padding: 50px 0 50px 0;
     }
-    .nav2 a{
-  
-font-size: 12px;
-
-padding: 10px 10px 10px 10px;
-
+    .nav2 a {
+        font-size: 12px;
+        padding: 10px 10px 10px 10px;
     }
-    
     .formulaire {
-    width: 100%;
-    background-color: rgba(245, 245, 245, 0.8);
-    position: relative;
-    top: 0%;
-    left: 0%;
-    padding: 0;
-}
+        width: 100%;
+        background-color: rgba(245, 245, 245, 0.8);
+        position: relative;
+        top: 0%;
+        left: 0%;
+        padding: 0;
+    }
     .formulaire h3 {
-    
-    margin: 0 10px 10px 10px;
-}
-    
-    .offMobile
-    {display: none;}
-    
-    
+        margin: 0 10px 10px 10px;
+    }
+    .offMobile {
+        display: none;
+    }
 }
